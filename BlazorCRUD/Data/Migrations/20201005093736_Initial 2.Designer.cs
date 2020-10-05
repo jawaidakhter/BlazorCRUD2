@@ -4,14 +4,16 @@ using BlazorCRUD.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlazorCRUD.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201005093736_Initial 2")]
+    partial class Initial2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,7 +83,7 @@ namespace BlazorCRUD.Data.Migrations
                             Brand = "Nokia 123",
                             Company = "Nokia",
                             CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 90, DateTimeKind.Local).AddTicks(187),
+                            CreatedDate = new DateTime(2020, 10, 5, 14, 37, 35, 667, DateTimeKind.Local).AddTicks(2263),
                             ProductCategoryId = 1,
                             SKU = "EP-1-1",
                             Title = "Nokia 123 Prime"
@@ -127,21 +129,21 @@ namespace BlazorCRUD.Data.Migrations
                         {
                             Id = 1,
                             CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 94, DateTimeKind.Local).AddTicks(4166),
+                            CreatedDate = new DateTime(2020, 10, 5, 14, 37, 35, 671, DateTimeKind.Local).AddTicks(3003),
                             Title = "Electronics"
                         },
                         new
                         {
                             Id = 2,
                             CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 94, DateTimeKind.Local).AddTicks(5468),
+                            CreatedDate = new DateTime(2020, 10, 5, 14, 37, 35, 671, DateTimeKind.Local).AddTicks(4308),
                             Title = "AC/Fridge"
                         },
                         new
                         {
                             Id = 3,
                             CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 94, DateTimeKind.Local).AddTicks(5494),
+                            CreatedDate = new DateTime(2020, 10, 5, 14, 37, 35, 671, DateTimeKind.Local).AddTicks(4334),
                             Title = "Auto Parts"
                         });
                 });
@@ -281,7 +283,7 @@ namespace BlazorCRUD.Data.Migrations
                             CompnayName = "Alex",
                             ContactPerson = "Yasir",
                             CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 95, DateTimeKind.Local).AddTicks(8886),
+                            CreatedDate = new DateTime(2020, 10, 5, 14, 37, 35, 672, DateTimeKind.Local).AddTicks(7244),
                             Email = "",
                             Phone = "1234"
                         },
@@ -291,7 +293,7 @@ namespace BlazorCRUD.Data.Migrations
                             CompnayName = "Galaxy",
                             ContactPerson = "Saleem",
                             CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 96, DateTimeKind.Local).AddTicks(593),
+                            CreatedDate = new DateTime(2020, 10, 5, 14, 37, 35, 672, DateTimeKind.Local).AddTicks(8934),
                             Email = "",
                             Phone = "1234"
                         });

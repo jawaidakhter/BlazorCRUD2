@@ -15,6 +15,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BlazorCRUD.Areas.Identity;
 using BlazorCRUD.Data;
+using BlazorCRUD.Services;
+using Syncfusion.Blazor;
 
 namespace BlazorCRUD
 {
@@ -40,6 +42,13 @@ namespace BlazorCRUD
 			services.AddServerSideBlazor();
 			services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 			services.AddSingleton<WeatherForecastService>();
+
+			services.AddSyncfusionBlazor();
+
+			// All entity class data services came here
+			services.AddScoped<ProductDataService>();
+
+
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

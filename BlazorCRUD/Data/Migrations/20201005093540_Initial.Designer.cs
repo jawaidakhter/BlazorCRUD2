@@ -4,14 +4,16 @@ using BlazorCRUD.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlazorCRUD.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201005093540_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,19 +75,6 @@ namespace BlazorCRUD.Data.Migrations
                     b.HasIndex("ProductCategoryId");
 
                     b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Brand = "Nokia 123",
-                            Company = "Nokia",
-                            CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 90, DateTimeKind.Local).AddTicks(187),
-                            ProductCategoryId = 1,
-                            SKU = "EP-1-1",
-                            Title = "Nokia 123 Prime"
-                        });
                 });
 
             modelBuilder.Entity("BlazorCRUD.Model.ProductCategory", b =>
@@ -127,22 +116,8 @@ namespace BlazorCRUD.Data.Migrations
                         {
                             Id = 1,
                             CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 94, DateTimeKind.Local).AddTicks(4166),
+                            CreatedDate = new DateTime(2020, 10, 5, 14, 35, 40, 480, DateTimeKind.Local).AddTicks(4672),
                             Title = "Electronics"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 94, DateTimeKind.Local).AddTicks(5468),
-                            Title = "AC/Fridge"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 94, DateTimeKind.Local).AddTicks(5494),
-                            Title = "Auto Parts"
                         });
                 });
 
@@ -273,28 +248,6 @@ namespace BlazorCRUD.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Vendors");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CompnayName = "Alex",
-                            ContactPerson = "Yasir",
-                            CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 95, DateTimeKind.Local).AddTicks(8886),
-                            Email = "",
-                            Phone = "1234"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CompnayName = "Galaxy",
-                            ContactPerson = "Saleem",
-                            CreatedBy = "jawaid",
-                            CreatedDate = new DateTime(2020, 10, 5, 15, 18, 30, 96, DateTimeKind.Local).AddTicks(593),
-                            Email = "",
-                            Phone = "1234"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
